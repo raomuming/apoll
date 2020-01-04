@@ -10,7 +10,12 @@ import (
 
 var (
 	clientManager = NewClientManager()
+	appIds        = []uint32{101, 102}
 )
+
+func GetAppIds() []uint32 {
+	return appIds
+}
 
 func StartWebSocket() {
 	http.HandleFunc("/acc", wsHandler)

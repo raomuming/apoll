@@ -1,7 +1,7 @@
 package ws
 
 import (
-	//"fmt"
+	"fmt"
 	"sync"
 	//"time"
 )
@@ -27,6 +27,11 @@ func NewClientManager() (clientManager *ClientManager) {
 		Broadcast:  make(chan []byte, 1000),
 	}
 
+	return
+}
+
+func GetUserKey(appId uint32, userId string) (key string) {
+	key = fmt.Sprintf("%d_%s", appId, userId)
 	return
 }
 
