@@ -1,5 +1,7 @@
 package ws
 
+import ()
+
 func PingController(client *Client, seq string, message []byte) (code uint32, msg string, data interface{}) {
 	return
 }
