@@ -19,6 +19,8 @@ func GetAppIds() []uint32 {
 
 func StartWebSocket() {
 	http.HandleFunc("/acc", wsHandler)
+	WebSocketRoutersInit()
+
 	go clientManager.start()
 
 	fmt.Println("Websocket start")
